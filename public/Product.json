@@ -10,7 +10,7 @@
     "ratingcount":253,
     "img": "/src/Image/1-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":5
 },
 {
     "id":2,
@@ -23,7 +23,7 @@
     "ratingcount":253,
     "img": "/src/Image/t-shart.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":4
 },
 {
     "id":3,
@@ -36,7 +36,7 @@
     "ratingcount":253,
     "img": "/src/Image/631489d27a072-square-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":10
 },
 {
     "id":4,
@@ -49,7 +49,7 @@
     "ratingcount":253,
     "img": "/src/Image/images-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":4
 },
 {
     "id":5,
@@ -62,7 +62,7 @@
     "ratingcount":253,
     "img": "/src/Image/download-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":7
 },
 {
     "id":6,
@@ -75,7 +75,7 @@
     "ratingcount":253,
     "img": "/src/Image/1-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":7
 },
 {
     "id":7,
@@ -88,7 +88,7 @@
     "ratingcount":253,
     "img": "/src/Image/t-shart.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":9
 },
 {
     "id":8,
@@ -101,7 +101,7 @@
     "ratingcount":253,
     "img": "/src/Image/631489d27a072-square-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":20
 },
 {
     "id":9,
@@ -114,7 +114,7 @@
     "ratingcount":253,
     "img": "/src/Image/images-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":50
 },
 {
     "id":10,
@@ -127,7 +127,7 @@
     "ratingcount":253,
     "img": "/src/Image/download-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":52
 },
 {
     "id":11,
@@ -140,7 +140,7 @@
     "ratingcount":253,
     "img": "/src/Image/1-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":250
 },
 {
     "id":12,
@@ -153,7 +153,7 @@
     "ratingcount":253,
     "img": "/src/Image/t-shart.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":10
 },
 {
     "id":13,
@@ -166,7 +166,7 @@
     "ratingcount":253,
     "img": "/src/Image/631489d27a072-square-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":60
 },
 {
     "id":14,
@@ -179,7 +179,7 @@
     "ratingcount":253,
     "img": "/src/Image/images-removebg-preview.png",
     "shipping": 1,
-    "quantity":0
+    "quantity":30
 },
 {
     "id":15,

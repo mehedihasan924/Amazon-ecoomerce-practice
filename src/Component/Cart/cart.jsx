@@ -10,11 +10,14 @@ const cart = (props) => {
    for( const Product of Cart ){
      totalprice= totalprice + Product.price;
      totalshipping=totalshipping + Product.shipping
+    
+
+
    }
 
    const tax=totalprice*5/100
    const GrandTotal= totalprice+totalshipping+tax
-
+   console.log(Cart)
    //card  Div
     return (
         <div className='cart'>
@@ -23,7 +26,7 @@ const cart = (props) => {
               <p> Total price:{totalprice} </p>
               <p> total Shopping:{totalshipping} </p>
               <p> tax: {tax} </p>
-              <h4> Grand total: {GrandTotal}</h4>
+              <h4> Grand total: {GrandTotal.toFixed(2)}</h4>
         </div>
     );
 };
