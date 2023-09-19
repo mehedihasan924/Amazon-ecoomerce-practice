@@ -40,7 +40,7 @@ const removeFromDb = id=>{
 const getShoppingCart =()=>{
     let shoppingCart ={};
     
-      const storedCart=localStorage.getItem
+      const storedCart=localStorage.getItem;
       ('shopping-cart');
       if(storedCart){
         shoppingCart=JSON.parse(storedCart)

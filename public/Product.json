@@ -10,7 +10,7 @@
     "ratingcount":253,
     "img": "/src/Image/1-removebg-preview.png",
     "shipping": 1,
-    "quantity":5
+    "quantity":0
 },
 {
     "id":2,
@@ -23,7 +23,7 @@
     "ratingcount":253,
     "img": "/src/Image/t-shart.png",
     "shipping": 1,
-    "quantity":4
+    "quantity":0
 },
 {
     "id":3,
@@ -36,7 +36,7 @@
     "ratingcount":253,
     "img": "/src/Image/631489d27a072-square-removebg-preview.png",
     "shipping": 1,
-    "quantity":10
+    "quantity":0
 },
 {
     "id":4,

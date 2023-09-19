@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Shop.css'
 import Product from '../Products/Product';
-import Cart from '../Cart/cart';
+import Cart from '../Cart/Cart';
 import { addToDb, getShoppingCart } from '../../Utility/Facebd';
 const Shop = () => {
     const [products, setProducts]=useState([])
@@ -29,30 +29,47 @@ const Shop = () => {
         //     }
         // }, [products])
  
+      //Product added cart and quantity set  
         useEffect(()=>{
-            const storedCart=getShoppingCart
-            const saveCart=[]
+            const storedCart= getShoppingCart
+            const savedCart=[]
             //step1:
             for(const id in storedCart){
                 // step 2: get Product
                 const addedProduct=products.find(product =>product.id===id)
-                console.log(addedProduct)
+                // console.log(addedProduct)
                 //step 3
                 if(addedProduct){
                     const quantity=storedCart[id]
                     addedProduct.quantity=quantity;
                    // step 4 
-                   saveCart.push(addedProduct)
+                   savedCart.push(addedProduct)
                 }
             }
-            setCart(saveCart);
+            setCart(savedCart);
         }, [products])
         
 
+
+
         // Function ke props akare patano hoyase
             const handleAdToCArt=(product )=>{
-            const newcart =[...cart, product];
-            setCart(newcart)
+                let newCart=[]
+            // const newcart =[...cart, product];
+                const exists =cart.find(pd=> pd.id === product.id);
+                if(!exists){
+                    product.quantity=1;
+                    newCart=[...cart,product ]
+                }
+                else{
+                    exists.quantity=exists.quantity+1;
+                    const remaining= cart.filter(pd=>pd.id!==product.id)
+                    newCart=[...remaining,exists]
+                }
+
+
+
+            setCart(newCart)
         //local storege a add korar jonno
             addToDb(product.id)
     }
