@@ -4,27 +4,27 @@ import { useLoaderData } from 'react-router-dom';
 import Orderdetails from '../Orderdetails/Orderdetails';
 import './Order.css'
 const Order = () => {
-    const Cart=useLoaderData()
-    console.log(Cart)
+    const cart=useLoaderData()
+    console.log(cart)
     return (
     <div className="shop-container">
          
         <div className="order-container">
-            <h1> Ordr page: {Cart.length}</h1> <br />
+            <h1> Ordr page:{cart.length} </h1> <br />
             <h1> All Items </h1>  
             {
-              Cart.map(data=>(
+             cart.map(data=>(
                 <Orderdetails
-                key={Cart.id}
+                key={cart.id}
                 Items={data}
                 > </Orderdetails>
                )) 
             }
 
         </div>
-        {/* <div className="cart-container">
-            <Cart Cart={Cart}> </Cart>
-        </div> */}
+        <div className="cart-container">
+          <Cart cart={cart}> </Cart>
+        </div>
     </div>
 
     );
