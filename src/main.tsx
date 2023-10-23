@@ -8,7 +8,8 @@ import Login from './Component/Login/Login.jsx'
 import Contact from './Component/Contact/Contact.jsx'
 import Order from './Component/Order/order.jsx';
 import ProductDetail from './Component/ProductDetails/ProductDetail.jsx';
-import CartProductloader from './CartProductLoader/CartProductloader.js'
+import CartProductloader from './CartProductLoader/CartProductloader.js';
+import CheckOut from './Component/CheckOut/CheckOut.jsx'
 import { 
   createBrowserRouter,
   RouterProvider,
@@ -47,7 +48,11 @@ import {
       {
         path:"/login",
         element:<Login> </Login>
-      }      
+      } ,
+      {
+        path: "/checkout",
+        element:<CheckOut></CheckOut>
+      }    
   ] }
 
  ])
