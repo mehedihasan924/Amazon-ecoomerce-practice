@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Cart from '../../Component/Cart/cart';
 import { useLoaderData } from 'react-router-dom';
 import Orderdetails from '../Orderdetails/Orderdetails';
+import {  removeFromDb  } from '../../utilities/fakedb';
 import './Order.css'
 const Order = () => {
-    const cart=useLoaderData()
-    console.log(cart)
+    const cartData=useLoaderData();
+    // new start newya hoise...remove korar jonno (+,-)
+    const [cart , setCart]=useState(cartData);
+
+    const handleRemoveFromCart=(id)=>{
+      const remaining=cart.filter(product=> product.id !==id);
+        setCart(remaining);
+        removeFromDb(id);
+    }
+
+
+   
     return (
     <div className="shop-container">
          
@@ -15,8 +26,9 @@ const Order = () => {
             {
              cart.map(data=>(
                 <Orderdetails
-                key={cart.id}
+                key={data.id}
                 Items={data}
+                handleRemoveFromCart={handleRemoveFromCart}
                 > </Orderdetails>
                )) 
             }

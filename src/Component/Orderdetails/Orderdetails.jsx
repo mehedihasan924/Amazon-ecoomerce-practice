@@ -2,7 +2,8 @@ import React from 'react';
 import './Orderdetails.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
-const Orderdetails = ({Items}) => {
+
+const Orderdetails = ({Items,handleRemoveFromCart}) => {
     return (
         <div className='singleItem'>
            <div className='right-side'>
@@ -13,10 +14,9 @@ const Orderdetails = ({Items}) => {
                 <h2> {Items.name}</h2>
                 <h4> Price: {Items.price}</h4>
                 <p> {Items.quantity}</p>
-              </div>
-             
-                 <button  className='delete-b'>
-                 <FontAwesomeIcon className=' delete-icon' icon={faTrash} /> 
+              </div>        
+                 <button onClick={()=>handleRemoveFromCart(Items.id)} className='delete-b'>
+                  <FontAwesomeIcon className=' delete-icon' icon={faTrash} /> 
                  </button>
         
            </div>

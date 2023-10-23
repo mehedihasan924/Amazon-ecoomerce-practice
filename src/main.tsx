@@ -39,11 +39,11 @@ import {
         path:"/contact",
         element:<Contact> </Contact>
       },
-      // {
-      //   path:"/order", 
-      //   element:<Order></Order>,
-      //   loader:CartProductloader
-      // },
+      {
+        path:"/order", 
+        element:<Order></Order>,
+        loader:CartProductloader
+      },
       {
         path:"/login",
         element:<Login> </Login>
