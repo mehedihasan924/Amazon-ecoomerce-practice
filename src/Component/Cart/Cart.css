@@ -3,4 +3,13 @@
     padding: 25px;
     position: sticky;
     top: 0;
+    position: relative;
+}
+.sonka{
+
+    top: -65px;
+    left: -278px;
+    color: rgb(255, 1, 1);
+    z-index: 1;
+    position: sticky;
 }

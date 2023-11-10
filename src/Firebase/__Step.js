@@ -7,13 +7,18 @@
  6. LOgin And Resgister component creat and router set...
  **/
 
-
-
-
+ 
  /**
   * 1. Create a Context provider
   * 2.Creat a context and set Provider
   * 3. set the childrn props
   * 4. set context value
   * 5. set the provider
+   */
+
+  /**
+  * Hosting  Firebase
+  * One Time per Pc Installing
+  * npm install -g firebase-tools
+  * firebase login
    */

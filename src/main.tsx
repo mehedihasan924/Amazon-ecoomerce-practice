@@ -12,7 +12,7 @@ import ProductDetail from './Component/ProductDetails/ProductDetail.jsx';
 import CartProductloader from './CartProductLoader/CartProductloader.js';
 import CheckOut from './Component/CheckOut/CheckOut.jsx';
 import AuthProvider from './Component/Providers/AuthProvider.jsx'
-
+import ProvetRoute from './Component/PrivetRoute/ProvetRoute.jsx'
 import { 
   createBrowserRouter,
   RouterProvider,
@@ -45,7 +45,7 @@ import {
       },
       {
         path:"/order", 
-        element:<Order></Order>,
+        element: <ProvetRoute><Order></Order> </ProvetRoute> ,
         loader:CartProductloader
       },
       {
@@ -58,7 +58,7 @@ import {
       } ,
       {
         path: "/checkout",
-        element:<CheckOut></CheckOut>
+        element: <ProvetRoute> <CheckOut></CheckOut> </ProvetRoute>
       }  
     
   ] }

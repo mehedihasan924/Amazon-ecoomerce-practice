@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
-import  { AuthContext  } from '../Providers/AuthProvider';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProvider'
 
 const Register = () => {
 
  const [error, setError]=useState('')
- const  {creatUser}=useContext(AuthContext)
+ const { creatUser}=useContext(AuthContext)
+ const navigate=useNavigate()
+ console.log(creatUser);
      
         const handleSubmit=(event)=>{
                 event.preventDefault()
@@ -16,23 +18,35 @@ const Register = () => {
                 const password=from.password.value
                 const confirm=from.confirm.value
                  console.log(name , email, password, confirm);
-                
                  setError('');
-          if(password !== confirm) {
-             setError("Your Password did not match")
-            return
-            } 
-            else if (password.length < 6){
-                setError("Minimum Password 6 Carecters use")
-                return
-            }  
-            else{
-                setError("Your are Success fuly register")
-                return                 
-            }  
 
-         
-            
+
+                //  if(password !== confirm) {
+                //    setError("Your Password did not match")
+                //    return
+                //    } 
+                //    else if (password.length < 6){
+                //        setError("Minimum Password 6 Carecters use")
+                //        return
+                //    }  
+                //    else{
+                //        setError("Your are Success fuly register")
+                //        return                 
+                //    }  
+                
+
+
+            creatUser(email, password)
+            .then(result=>{
+              const logedUser=result.user;
+              console.log(logedUser);
+              from.reset()
+              navigate('/')
+            })
+            .catch(error=>{
+               console.log(error);
+            })
+       
     
         }
  

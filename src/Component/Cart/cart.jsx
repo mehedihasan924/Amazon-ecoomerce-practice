@@ -8,6 +8,7 @@ const Cart = ({ cart , habdleClearCart,children }) => {
 
     // console.log(cart);
 
+    
     let totalPrice = 0;
     let totalShipping = 0;
     let quantity = 0;
@@ -25,16 +26,20 @@ const Cart = ({ cart , habdleClearCart,children }) => {
 
     const grandTotal = totalPrice + totalShipping + tax;
 
+
+
     return (
         <div className='cart'>
             <h4>Order Summary</h4>
-            <p>Selected Items: {quantity}</p>
+            <p>Selected Items: {quantity} </p>
             <p>Total Price: ${totalPrice}</p>
             <p>Shipping: ${totalShipping}</p>
             <p>Tax: ${tax.toFixed(2)}</p>
             <h6>Grand Total: ${grandTotal.toFixed(2)} </h6>
             <button onClick={habdleClearCart}> Delete cart Item  <FontAwesomeIcon  icon={faTrash} />  </button>
             {children}
+
+            <div className='sonka'> <span >{quantity}  </span></div>
         </div>
     );
 };
