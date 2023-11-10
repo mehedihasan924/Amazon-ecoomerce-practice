@@ -21,4 +21,5 @@
   * One Time per Pc Installing
   * npm install -g firebase-tools
   * firebase login
+  * firebase init
    */

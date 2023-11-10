@@ -1,18 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import Home from './Component/Home/Home.jsx'
-import Shop from './Component/Shop/Shop.jsx'
-import Login from './Component/Login/Login.jsx'
-import Register from './Component//Register/Register.jsx'
-import Contact from './Component/Contact/Contact.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import Home from './Component/Home/Home.jsx';
+import Shop from './Component/Shop/Shop.jsx';
+import Login from './Component/Login/Login.jsx';
+import Register from './Component//Register/Register.jsx';
+import Contact from './Component/Contact/Contact.jsx';
 import Order from './Component/Order/order.jsx';
 import ProductDetail from './Component/ProductDetails/ProductDetail.jsx';
 import CartProductloader from './CartProductLoader/CartProductloader.js';
 import CheckOut from './Component/CheckOut/CheckOut.jsx';
-import AuthProvider from './Component/Providers/AuthProvider.jsx'
-import ProvetRoute from './Component/PrivetRoute/ProvetRoute.jsx'
+import AuthProvider from './Component/Providers/AuthProvider.jsx';
+import ProvetRoute from './Component/PrivetRoute/ProvetRoute.jsx';
+
 import { 
   createBrowserRouter,
   RouterProvider,
@@ -69,6 +70,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
       <AuthProvider> 
           <RouterProvider router={router}> </RouterProvider>
+        
       </AuthProvider>
   </React.StrictMode>,
 )

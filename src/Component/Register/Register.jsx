@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider'
 
 const Register = () => {
-
+  const [show, setShow]=useState(false) 
  const [error, setError]=useState('')
  const { creatUser}=useContext(AuthContext)
  const navigate=useNavigate()
@@ -75,7 +75,16 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                <input type={show ? "text" : "password"} name='password' placeholder="password" className="input input-bordered" required />
+                
+                <p onClick={()=>setShow(!show)}> 
+                  <small>
+                    {
+                    show ? <span> Hiden Password</span>:  <span> Show Password</span>
+                    }
+                    </small>
+              
+               </p>
                 <div className="form-control">
                 <label className="label">
                   <span className="label-text">Cofirm Password</span>
