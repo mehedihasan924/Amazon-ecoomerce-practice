@@ -17,7 +17,6 @@ const Header = () => {
         .then(result=>{})
         .catch(error=>console.error(error))
     }
-
     return (
         <nav className='header'>
              <img src={Logo} alt="" />
